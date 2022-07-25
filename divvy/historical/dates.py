@@ -1,6 +1,6 @@
 import pandas as pd
 
-from typing import Tuple
+from typing import Tuple, List
 
 import datetime
 from dateutil.relativedelta import relativedelta
@@ -35,7 +35,7 @@ class DivvyDates:
         if date > self.last_date:
             raise DateRangeError(f"{date} data hasn't been released yet.")
 
-    def create_date_range(self, start_date: str, end_date: str) -> list[datetime.date]:
+    def create_date_range(self, start_date: str, end_date: str) -> List[datetime.date]:
         dates = pd.date_range(
             str(self.first_of_month(start_date)),
             str(self.first_of_month(end_date)),
