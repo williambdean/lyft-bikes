@@ -45,9 +45,9 @@ class DivvyDates:
         return [date.to_pydatetime().date() for date in dates]
 
     @staticmethod
-    def first_of_month(date: str):
+    def first_of_month(date: str) -> datetime.date:
         return datetime.datetime.strptime(date, "%Y-%m-%d").date().replace(day=1)
 
     @staticmethod
-    def to_date(year: int, month: int):
+    def to_date(year: int, month: int) -> datetime.date:
         return datetime.date(year, month, 1)

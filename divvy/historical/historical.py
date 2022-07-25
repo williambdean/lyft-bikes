@@ -21,7 +21,7 @@ class Downloader:
 
     @property
     def url(self):
-        return f"https://divvy-tripdata.s3.amazonaws.com/{self.file_name('zip')}"
+        return f"https://divvy-tripdata.s3.amazonaws.com/{self.file_name(suffix='zip')}"
 
     def read(self) -> pd.DataFrame:
         response = requests.get(self.url)
@@ -31,7 +31,7 @@ class Downloader:
 
         zipdata = zipfile.ZipFile(io.BytesIO(response.content))
 
-        return pd.read_csv(zipdata.open(self.file_name("csv")))
+        return pd.read_csv(zipdata.open(self.file_name(suffix="csv")))
 
 
 class HistoricalTrips:
