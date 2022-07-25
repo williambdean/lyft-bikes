@@ -1,25 +1,35 @@
-# divvy
+# Divvy Rideshare Data
 
 ## Overview 
 
-Chicago Divvy data from Python
+Access Chicago rideshare data from Python
 
-Data sources taken from here: https://ride.divvybikes.com/system-data
+Data sources taken from here: https://ride.divvybikes.com/system-data 
 
-Historical: https://divvy-tripdata.s3.amazonaws.com/index.html
-Live and stations: https://gbfs.divvybikes.com/gbfs/gbfs.json
+Which come from: 
+
+- Historical: https://divvy-tripdata.s3.amazonaws.com/index.html 
+- Live and stations: https://gbfs.divvybikes.com/gbfs/gbfs.json
 
 ## Usage
+
+Reading from the various data sources can be done with the following functions.
 
 ```python 
 import divvy
 
-# Historical trips 
-df_trips = divvy.read_historical_trips(start_date="2021-01-01", end_date="2021-02-01")
+# Historical trips between a given date range
+df_trips = divvy.read_historical_trips(
+    start_date="2021-01-01", 
+    end_date="2021-02-01"
+)
 
 # Available ebikes and scooters
 df_available = divvy.read_available()
 
 # Station information and bikes and scooters available there 
 df_stations = divvy.read_stations()
+
+# Boundary of old pricing 
+df_boundary = divvy.read_fee_boundary()
 ```

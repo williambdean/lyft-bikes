@@ -8,6 +8,8 @@ from divvy.stations import StationInfo, StationStatus
 from divvy.historical import HistoricalTrips
 from divvy.boundaries import read_boundary
 
+__version__ = "0.0.1"
+
 
 def read_live() -> pd.DataFrame:
     live = Live()
