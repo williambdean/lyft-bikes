@@ -1,5 +1,7 @@
 import pandas as pd
 
+from typing import Union
+
 import io
 import zipfile
 import requests
@@ -38,17 +40,20 @@ class HistoricalTrips:
     def __init__(self):
         self.dates = DivvyDates()
 
-    def read(self, start_date: str, end_date: str) -> pd.DataFrame:
+    def read(self, start_date: str, end_date: Union[str, None] = None) -> pd.DataFrame:
         """Return historical trips for a given range of dates
 
         Args:
             start_date: start date for the data in %Y-%m-%d format
-            end_date: end date in the same format
+            end_date: end date in the same format. Defaults to last date available
 
         Returns:
             Historical trip DataFrame for the date range provided.
 
         """
+        if end_date is None:
+            end_date = str(self.dates.last_date)
+
         return pd.concat(
             [
                 self.get_trips(date.year, date.month)

@@ -12,22 +12,14 @@ Live and stations: https://gbfs.divvybikes.com/gbfs/gbfs.json
 ## Usage
 
 ```python 
-from divvy.historical import HistoricalTrips 
+import divvy
 
-trips = HistoricalTrips()
-df_trips = trips.read(start_date="2021-01-01", end_date="2021-02-01")
-```
+# Historical trips 
+df_trips = divvy.read_historical_trips(start_date="2021-01-01", end_date="2021-02-01")
 
-```python 
-from divvy.live import Live
-live = Live()
+# Available ebikes and scooters
+df_available = divvy.read_available()
 
-df_available = live.read()
-```
-
-```python 
-from divvy.stations import StationInfo, StationStatus
-
-df_info = StationInfo().read()
-df_status = StationStatus().read()
+# Station information and bikes and scooters available there 
+df_stations = divvy.read_stations()
 ```
