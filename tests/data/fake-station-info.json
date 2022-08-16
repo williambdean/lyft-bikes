@@ -1,0 +1,133 @@
+{
+    "data": {
+        "stations": [
+            {
+                "eightd_has_key_dispenser": false,
+                "lat": 41.845687,
+                "eightd_station_services": [],
+                "lon": -87.622481,
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "legacy_id": "147",
+                "capacity": 15,
+                "station_id": "a3a62fc9-a135-11e9-9cda-0a87ae2ba916",
+                "station_type": "classic",
+                "electric_bike_surcharge_waiver": false,
+                "rental_methods": [
+                    "KEY",
+                    "CREDITCARD",
+                    "TRANSITCARD"
+                ],
+                "short_name": "TA1307000005",
+                "name": "Indiana Ave & 26th St",
+                "has_kiosk": true,
+                "external_id": "a3a62fc9-a135-11e9-9cda-0a87ae2ba916",
+                "region_id": "0"
+            },
+            {
+                "eightd_has_key_dispenser": false,
+                "lat": 41.842733,
+                "eightd_station_services": [],
+                "lon": -87.635491,
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "legacy_id": "401",
+                "capacity": 11,
+                "station_id": "a3ad13e4-a135-11e9-9cda-0a87ae2ba916",
+                "station_type": "classic",
+                "electric_bike_surcharge_waiver": false,
+                "rental_methods": [
+                    "KEY",
+                    "CREDITCARD",
+                    "TRANSITCARD"
+                ],
+                "short_name": "15443",
+                "name": "Shields Ave & 28th Pl",
+                "has_kiosk": true,
+                "external_id": "a3ad13e4-a135-11e9-9cda-0a87ae2ba916",
+                "region_id": "0"
+            },
+            {
+                "eightd_has_key_dispenser": false,
+                "lat": 41.94524356848,
+                "eightd_station_services": [],
+                "lon": -87.7066499009,
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "legacy_id": "490",
+                "capacity": 15,
+                "station_id": "a3afd294-a135-11e9-9cda-0a87ae2ba916",
+                "station_type": "classic",
+                "electric_bike_surcharge_waiver": false,
+                "rental_methods": [
+                    "KEY",
+                    "CREDITCARD",
+                    "TRANSITCARD"
+                ],
+                "short_name": "15631",
+                "name": "Troy St & Elston Ave",
+                "has_kiosk": true,
+                "external_id": "a3afd294-a135-11e9-9cda-0a87ae2ba916",
+                "region_id": "0"
+            },
+            {
+                "eightd_has_key_dispenser": false,
+                "lat": 41.887832,
+                "eightd_station_services": [],
+                "lon": -87.755527,
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "legacy_id": "530",
+                "capacity": 11,
+                "station_id": "a3b11480-a135-11e9-9cda-0a87ae2ba916",
+                "station_type": "classic",
+                "electric_bike_surcharge_waiver": false,
+                "rental_methods": [
+                    "KEY",
+                    "CREDITCARD",
+                    "TRANSITCARD"
+                ],
+                "short_name": "530",
+                "name": "Laramie Ave & Kinzie St",
+                "has_kiosk": true,
+                "external_id": "a3b11480-a135-11e9-9cda-0a87ae2ba916",
+                "region_id": "0"
+            },
+            {
+                "eightd_has_key_dispenser": false,
+                "lat": 41.857556,
+                "eightd_station_services": [],
+                "lon": -87.661535,
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "legacy_id": "129",
+                "capacity": 15,
+                "station_id": "a3a5d3bb-a135-11e9-9cda-0a87ae2ba916",
+                "station_type": "classic",
+                "electric_bike_surcharge_waiver": false,
+                "rental_methods": [
+                    "KEY",
+                    "CREDITCARD",
+                    "TRANSITCARD"
+                ],
+                "short_name": "13135",
+                "name": "Blue Island Ave & 18th St",
+                "has_kiosk": true,
+                "external_id": "a3a5d3bb-a135-11e9-9cda-0a87ae2ba916",
+                "region_id": "0"
+            }
+        ]
+    },
+    "last_updated": 1660678818,
+    "ttl": 5
+}

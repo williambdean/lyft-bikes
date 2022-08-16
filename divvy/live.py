@@ -1,7 +1,7 @@
-from divvy.divvy_request import RequestBase
+from divvy.divvy_request import DivvyDataBase
 
 
-class Live(RequestBase):
+class Live(DivvyDataBase):
     """Live feed endpoint.
 
     Access ebikes and scooters that are currently available.

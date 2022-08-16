@@ -1,7 +1,7 @@
-from divvy.divvy_request import RequestBase
+from divvy.divvy_request import DivvyDataBase
 
 
-class StationBase(RequestBase):
+class StationBase(DivvyDataBase):
     key: str = "stations"
 
 

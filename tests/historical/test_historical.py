@@ -1,16 +1,11 @@
 import pytest
 
-from pathlib import Path
-
 import pandas as pd
 
 from datetime import date
 
 from divvy.historical.dates import DivvyDates, DateRangeError
 from divvy.historical.historical import Downloader, HistoricalTrips
-
-
-TEST_DATA_DIR = Path(__file__).parents[1] / "data"
 
 
 @pytest.fixture
@@ -29,10 +24,10 @@ def test_downloader(downloader, date, file_name) -> None:
 
 
 @pytest.fixture
-def historical_trips() -> HistoricalTrips:
+def historical_trips(test_data_dir) -> HistoricalTrips:
     class MockDownloader:
         def read(self, date: date) -> pd.DataFrame:
-            file_path = TEST_DATA_DIR / "sample_historical_trips.csv"
+            file_path = test_data_dir / "sample_historical_trips.csv"
 
             return pd.read_csv(file_path)
 

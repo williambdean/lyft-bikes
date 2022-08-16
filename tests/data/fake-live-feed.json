@@ -1,0 +1,83 @@
+{
+    "data": {
+        "bikes": [
+            {
+                "type": "electric_bike",
+                "is_reserved": 0,
+                "name": "9bf26215141842d28bad9bbd1f71df3c",
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "fusion_lon": 0,
+                "is_disabled": 0,
+                "lat": 41.95689383333333,
+                "bike_id": "9bf26215141842d28bad9bbd1f71df3c",
+                "lon": -87.69394816666667,
+                "fusion_lat": 0
+            },
+            {
+                "type": "electric_scooter",
+                "is_reserved": 0,
+                "name": "293adbb121cc4371993350d7d346f0ee",
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "fusion_lon": 0,
+                "is_disabled": 0,
+                "lat": 41.86501783333333,
+                "bike_id": "293adbb121cc4371993350d7d346f0ee",
+                "lon": -87.65695883333333,
+                "fusion_lat": 0
+            },
+            {
+                "type": "electric_bike",
+                "is_reserved": 0,
+                "name": "095e281ddf8f1298667828e38b2b240d",
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "fusion_lon": 0,
+                "is_disabled": 0,
+                "lat": 41.95682683333333,
+                "bike_id": "095e281ddf8f1298667828e38b2b240d",
+                "lon": -87.77684166666667,
+                "fusion_lat": 0
+            },
+            {
+                "type": "electric_bike",
+                "is_reserved": 0,
+                "name": "f3888a8e5664bf0cbf0a6f5e8c247339",
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "fusion_lon": 0,
+                "is_disabled": 0,
+                "lat": 41.8483165,
+                "bike_id": "f3888a8e5664bf0cbf0a6f5e8c247339",
+                "lon": -87.700329,
+                "fusion_lat": 0
+            },
+            {
+                "type": "electric_bike",
+                "is_reserved": 0,
+                "name": "8eec1d248bd01238b05252564e747ad6",
+                "rental_uris": {
+                    "ios": "https://chi.lft.to/lastmile_qr_scan",
+                    "android": "https://chi.lft.to/lastmile_qr_scan"
+                },
+                "fusion_lon": 0,
+                "is_disabled": 0,
+                "lat": 41.741204,
+                "bike_id": "8eec1d248bd01238b05252564e747ad6",
+                "lon": -87.6316735,
+                "fusion_lat": 0
+            }
+        ]
+    },
+    "last_updated": 1660678174,
+    "ttl": 5
+}
