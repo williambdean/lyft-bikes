@@ -9,16 +9,10 @@ from divvy.live import Live
 
 
 @pytest.fixture
-def live(test_data_dir) -> Live:
-    class RequestBaseMock:
-        def data(self, url: str) -> Dict:
-            file = test_data_dir / "fake-live-feed.json"
-            with open(file, "r") as f:
-                data = json.load(f)
+def live(mock_requests_base) -> Live:
+    mock_requests_base.file_name = "fake-live-feed.json"
 
-            return data
-
-    return Live(requests_base=RequestBaseMock())
+    return Live(requests_base=mock_requests_base)
 
 
 def test_read(live) -> None:
