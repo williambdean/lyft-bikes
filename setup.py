@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup, find_packages
 
 from pathlib import Path
 
@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="python-divvy",
-    version="0.0.1",
+    version="0.0.3",
     author="William Dean",
     author_email="wd60622@gmail.com",
     url="https://github.com/wd60622/divvy",
@@ -25,7 +25,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
-    packages=["divvy"],
+    packages=find_packages(),
     install_requires=["requests", "pandas"],
-    test_require=["pytest", "pytest-cov"],
+    extras_require={"test": ["pytest", "pytest-cov"]},
 )
