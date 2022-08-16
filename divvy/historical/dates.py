@@ -3,6 +3,7 @@ import pandas as pd
 from typing import Tuple, List
 
 import datetime
+from calendar import monthrange
 from dateutil.relativedelta import relativedelta
 
 
@@ -21,8 +22,16 @@ class DivvyDates:
 
     @property
     def last_date(self) -> datetime.date:
-        """Latest available day in the historical dataset."""
-        return datetime.date.today().replace(day=1) - relativedelta(months=1)
+        """Latest available day in the historical dataset.
+        
+        Based on the releases of the historical trips. Seems to be safe to include 
+        the previous month.
+
+        """
+        previous_month = datetime.date.today().replace(day=1) - relativedelta(months=1)
+        last_day_previous_month = monthrange(previous_month.year, previous_month.month)[1]
+
+        return previous_month.replace(day=last_day_previous_month)
 
     @property
     def date_range(self) -> Tuple[str, str]:
@@ -36,6 +45,7 @@ class DivvyDates:
             raise DateRangeError(f"{date} data hasn't been released yet.")
 
     def create_date_range(self, start_date: str, end_date: str) -> List[datetime.date]:
+        """Return list of dates from start to end"""
         dates = pd.date_range(
             str(self.first_of_month(start_date)),
             str(self.first_of_month(end_date)),

@@ -14,6 +14,7 @@ setup(
     author_email="wd60622@gmail.com",
     url="https://github.com/wd60622/divvy",
     description="Python Client for Chicago Ridesharing Data.",
+    license="MIT",
     long_description=README,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -25,6 +26,6 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     packages=["divvy"],
-    install_requires=["requests", "pandas", "geopandas"],
+    install_requires=["requests", "pandas"], 
     test_require=["pytest", "pytest-mock"],
 )

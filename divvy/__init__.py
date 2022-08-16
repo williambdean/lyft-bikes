@@ -6,7 +6,6 @@ from typing import Union
 from divvy.live import Live
 from divvy.stations import StationInfo, StationStatus
 from divvy.historical import HistoricalTrips
-from divvy.boundaries import read_boundary
 
 __version__ = "0.0.1"
 
@@ -34,7 +33,3 @@ def read_historical_trips(
     trips = HistoricalTrips()
 
     return trips.read(start_date=start_date, end_date=end_date)
-
-
-def read_fee_boundary() -> gpd.GeoDataFrame:
-    return read_boundary()
