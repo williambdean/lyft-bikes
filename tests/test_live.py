@@ -1,3 +1,4 @@
+from datetime import datetime
 import pytest
 
 import pandas as pd
@@ -20,3 +21,4 @@ def test_read(live) -> None:
 
     assert isinstance(df_results, pd.DataFrame)
     assert len(df_results) == 5
+    assert isinstance(live.last_updated, datetime)

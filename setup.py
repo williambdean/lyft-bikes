@@ -27,5 +27,5 @@ setup(
     ],
     packages=["divvy"],
     install_requires=["requests", "pandas"],
-    test_require=["pytest", "pytest-mock"],
+    test_require=["pytest", "pytest-cov"],
 )

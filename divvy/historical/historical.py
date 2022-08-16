@@ -90,8 +90,3 @@ class HistoricalTrips:
         self.dates.check_valid(date)
 
         return self.downloader.read(date=date)
-
-
-if __name__ == "__main__":
-    trips = HistoricalTrips()
-    df_trips = trips.read(start_date="2021-01-01", end_date="2021-02-01")
