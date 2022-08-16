@@ -26,6 +26,6 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     packages=["divvy"],
-    install_requires=["requests", "pandas"], 
+    install_requires=["requests", "pandas"],
     test_require=["pytest", "pytest-mock"],
 )

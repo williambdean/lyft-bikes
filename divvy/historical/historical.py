@@ -22,30 +22,31 @@ class Downloader:
 
     """
 
-    def __init__(self, date: datetime.date) -> None:
-        self.date = date
+    def __init__(self, http_client=requests) -> None:
+        self.http_client = http_client
 
-    def file_name(self, suffix: str) -> str:
-        return f"{self.date:%Y%m}-divvy-tripdata.{suffix}"
+    def file_name(self, date: datetime.date, suffix: str) -> str:
+        return f"{date:%Y%m}-divvy-tripdata.{suffix}"
 
-    @property
-    def url(self):
-        return f"https://divvy-tripdata.s3.amazonaws.com/{self.file_name(suffix='zip')}"
+    def url(self, date: datetime.date):
+        return f"https://divvy-tripdata.s3.amazonaws.com/{self.file_name(date=date, suffix='zip')}"
 
-    def read(self) -> pd.DataFrame:
-        response = requests.get(self.url)
+    def read(self, date: datetime.date) -> pd.DataFrame:
+        url = self.url(date=date)
+        response = self.http_client.get(url)
 
         if not response.ok:
-            raise BadRequest(f"The response for {self.url} wasn't okay.")
+            raise BadRequest(f"The response for {url} wasn't okay.")
 
         zipdata = zipfile.ZipFile(io.BytesIO(response.content))
 
-        return pd.read_csv(zipdata.open(self.file_name(suffix="csv")))
+        return pd.read_csv(zipdata.open(self.file_name(date=date, suffix="csv")))
 
 
 class HistoricalTrips:
-    def __init__(self):
-        self.dates = DivvyDates()
+    def __init__(self, dates: DivvyDates, downloader: Downloader):
+        self.dates = dates
+        self.downloader = downloader
 
     def read(self, start_date: str, end_date: Union[str, None] = None) -> pd.DataFrame:
         """Return historical trips for a given range of dates
@@ -81,16 +82,14 @@ class HistoricalTrips:
 
         date = pd.to_datetime(df_trips["started_at"]).dt.date.astype(str)
         idx = (date >= start_date) & (date <= end_date)
-        return df_trips.loc[idx, :]
+        return df_trips.loc[idx, :].reset_index(drop=True)
 
     def get_trips(self, year: int, month: int) -> pd.DataFrame:
         """Return pandas.DataFrame for a given year and month"""
-        time = self.dates.to_date(year, month)
-        self.dates.check_valid(time)
+        date = self.dates.to_date(year, month)
+        self.dates.check_valid(date)
 
-        downloader = Downloader(time)
-
-        return downloader.read()
+        return self.downloader.read(date=date)
 
 
 if __name__ == "__main__":

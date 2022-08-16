@@ -23,13 +23,15 @@ class DivvyDates:
     @property
     def last_date(self) -> datetime.date:
         """Latest available day in the historical dataset.
-        
-        Based on the releases of the historical trips. Seems to be safe to include 
+
+        Based on the releases of the historical trips. Seems to be safe to include
         the previous month.
 
         """
         previous_month = datetime.date.today().replace(day=1) - relativedelta(months=1)
-        last_day_previous_month = monthrange(previous_month.year, previous_month.month)[1]
+        last_day_previous_month = monthrange(previous_month.year, previous_month.month)[
+            1
+        ]
 
         return previous_month.replace(day=last_day_previous_month)
 
