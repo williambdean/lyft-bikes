@@ -4,7 +4,6 @@ from divvy.divvy_request import RequestBase, DivvyDataBase
 
 
 @pytest.fixture
-@pytest.fixture
 def new_source():
     class NewDivvyData(DivvyDataBase):
         pass
