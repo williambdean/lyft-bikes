@@ -2,7 +2,7 @@
 
 ## Overview 
 
-Access Chicago rideshare data from Python.
+Access and work with Chicago rideshare data from Python.
 
 Data sources taken from here: https://ride.divvybikes.com/system-data 
 
