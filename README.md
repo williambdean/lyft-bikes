@@ -76,7 +76,10 @@ divvy.pricing.visitor_pass_rate(casual_non_electric_duration)
 New pricing can easily be defined from the `divvy.pricing` module as well. For instance, a reduced ebike rate can be created for casual users. 
 
 ```python 
-reduced_ebike_rate = divvy.pricing.UnlockRate(amount=100) + divvy.pricing.MinuteRate(amount=25, start=0)
+reduced_ebike_rate = (
+    divvy.pricing.UnlockRate(amount=100) 
+    + divvy.pricing.MinuteRate(amount=25, start=0)
+)
 
 casual_electric_duration = [10, 20, 30]
 
