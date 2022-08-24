@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="python-divvy",
-    version="0.0.3",
+    version="0.0.4",
     author="William Dean",
     author_email="wd60622@gmail.com",
     url="https://github.com/wd60622/divvy",
