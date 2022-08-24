@@ -53,7 +53,7 @@ class UnlockRate(Rate):
 # Classic Bikes
 member_classic_rate = MinuteRate(amount=16, start=45)
 single_ride_rate = UnlockRate(amount=100) + MinuteRate(amount=16, start=0)
-vistor_pass_rate = MinuteRate(amount=16, start=3 * 60)
+visitor_pass_rate = MinuteRate(amount=16, start=3 * 60)
 
 # Ebikes
 member_ebike_rate = MinuteRate(amount=16, start=0)
