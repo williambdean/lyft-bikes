@@ -26,9 +26,10 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     packages=find_packages(),
-    data_files=[
-        ("", ["divvy/geo/fees.geojson"]),
-    ],
+    package_data={
+        "divvy": ["geo/*.geojson"],
+    },
+    include_package_data=True,
     install_requires=["requests", "pandas"],
     extras_require={"test": ["pytest", "pytest-cov"]},
 )
