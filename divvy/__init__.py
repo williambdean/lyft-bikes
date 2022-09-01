@@ -11,7 +11,9 @@ from divvy.historical.historical import HistoricalTrips, Downloader
 
 from divvy import pricing
 
-__version__ = "0.0.4"
+from divvy.geo import read_fee_boundary
+
+__version__ = "0.0.5"
 
 
 def read_live() -> pd.DataFrame:
