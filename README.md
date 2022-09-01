@@ -46,6 +46,13 @@ df_available = divvy.read_available()
 df_stations = divvy.read_stations()
 ```
 
+With the install of [`geopandas`](https://geopandas.org/en/stable/), the pre-May 2022 pricing boundary for ebikes can be accessed with the `read_fee_boundary` function. 
+
+```python 
+# Single row geopandas.GeoDataFrame
+gdf_fees = divvy.read_fee_boundary()
+```
+
 ### Trip Pricing
 
 This package allows provides access to the latest pricing for the different bikes as defined [here](https://divvybikes.com/pricing). These prices can be apply to `pandas.Series` objects as follows: 
