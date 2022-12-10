@@ -92,3 +92,15 @@ casual_electric_duration = [10, 20, 30]
 
 reduced_ebike_rate(casual_electric_duration)
 ```
+
+## Development
+
+The development environment was created with `conda` and can be recreated and activated that way. Here are some helpful commands for [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
+
+If there is a change to dependencies in the project, the `setup.py` will likely have to be changed as well.
+
+The `setup.py` is important for deployment to PyPI. The project might move to another package manager in the future. In order to ease deployment.
+
+## Contributing
+
+If you would like to contribute or find some issue in the code, please [open an Issue](https://github.com/wd60622/divvy/issues/new) or a PR on GitHub. Thanks!
