@@ -4,14 +4,14 @@
 
 Access and work with Chicago rideshare data from Python.
 
-All the information is derived from the official divvy bikes website: https://divvybikes.com/
+All the information is derived from the official divvy bikes website: [https://divvybikes.com/](https://divvybikes.com/)
 
-Where the data sources were linked to: https://ride.divvybikes.com/system-data 
+Where the data sources were linked to: [https://ride.divvybikes.com/system-data](https://ride.divvybikes.com/system-data)
 
 which point to: 
 
-- Historical: https://divvy-tripdata.s3.amazonaws.com/index.html 
-- Live and stations: https://gbfs.divvybikes.com/gbfs/gbfs.json
+- Historical: [https://divvy-tripdata.s3.amazonaws.com/index.html](https://divvy-tripdata.s3.amazonaws.com/index.html)
+- Live and stations: [https://gbfs.divvybikes.com/gbfs/gbfs.json](https://gbfs.divvybikes.com/gbfs/gbfs.json)
 
 
 ## Installation 
