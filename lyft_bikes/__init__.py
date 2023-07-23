@@ -3,15 +3,16 @@ import numpy as np
 
 from typing import Union
 
-from divvy.live import Live
-from divvy.stations import StationInfo, StationStatus
+from lyft_bikes.live import Live
+from lyft_bikes.stations import StationInfo, StationStatus
 
-from divvy.historical.dates import DivvyDates
-from divvy.historical.historical import HistoricalTrips, Downloader
+from lyft_bikes.historical.dates import DivvyDates
+from lyft_bikes.historical.historical import HistoricalTrips
+from lyft_bikes.historical import downloader
 
-from divvy import pricing
+from lyft_bikes import pricing
 
-from divvy.geo import read_fee_boundary
+from lyft_bikes.geo import read_fee_boundary
 
 __version__ = "0.0.5"
 
@@ -35,13 +36,22 @@ def read_stations() -> pd.DataFrame:
     )
 
 
+CITY_DOWNLOADERS = {
+    "Chicago": downloader.DivvyDownloader, 
+    "New York City": downloader.CitiBikesDownloader,
+}
+
 def read_historical_trips(
-    start_date: str, end_date: Union[str, None] = None
+    start_date: str, city: str, end_date: Union[str, None] = None, 
 ) -> pd.DataFrame:
     """Read historical trips."""
+    if city not in CITY_DOWNLOADERS:
+        raise ValueError(f"City {city} is not supported. Supported cities are {CITY_DOWNLOADERS.keys()}")
+    
+    downloader = CITY_DOWNLOADERS[city]()
     trips = HistoricalTrips(
         dates=DivvyDates(),
-        downloader=Downloader(),
+        downloader=downloader, 
     )
 
     return trips.read(start_date=start_date, end_date=end_date)

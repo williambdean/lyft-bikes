@@ -1,6 +1,6 @@
 import pytest
 
-from divvy.divvy_request import RequestBase, DivvyDataBase
+from lyft_bikes.divvy_request import RequestBase, DivvyDataBase
 
 
 @pytest.fixture

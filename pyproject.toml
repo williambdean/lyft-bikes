@@ -1,3 +1,53 @@
+[tool.poetry]
+name = "lyft-bikes"
+version = "0.1.0"
+description = "Python Client for Lyft Bike Sharing Data."
+authors = ["Will Dean <wd60622@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://wd60622.github.io/divvy/"
+documentation = "https://wd60622.github.io/divvy/"
+repository = "https://github.com/wd60622/divvy/"
+packages = [
+    { include = "lyft_bikes" },
+    { include = "lyft_bikes/py.typed" },
+    { include = "lyft_bikes/geo/*" }, 
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+pandas = "*"
+requests = "*"
+lxml = { version = "*", optional = true }
+geopandas = { version = "*", optional = true}
+
+[tool.poetry.extras]
+boundary = ["geopandas"]
+index = ["lxml"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
+black = "^23.3.0"
+ipython = "8.8.0"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.3"
+mkdocs-material = "^9.1.17"
+mkdocstrings = {extras = ["python"], version = "^0.22.0"}
+
 [build-system]
-requires = ["setuptools>=42"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

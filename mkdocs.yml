@@ -1,0 +1,75 @@
+site_name: Lyft Bike Share Data 
+
+theme:
+  name: "material"
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+repo_name: Lyft Bike Share Data
+repo_url: https://github.com/wd60622/lyft-bikes
+edit_uri: blob/main/docs/
+site_url: https://wd60622.github.io/lyft-bikes
+
+extra: 
+  homepage: https://wd60622.github.io/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wd60622/lyft-bikes
+
+nav:
+  - Overview: index.md
+  - Modules: 
+    - modules/historical.md
+    - modules/pricing.md
+  - Examples: 
+    - examples/historical-trips.md
+  #   - Distributions: distributions.md
+  #   - Models: models.md
+  #   - Mixins: mixins.md
+  # - Examples: 
+  #   - Binomial Model: examples/binomial.md
+  #   - Scaling Distributions: examples/scaling-distributions.md
+  #   - SciPy Distributions: examples/scipy-connection.md
+  #   - Plotting: examples/plotting.md
+  #   - Vectorized Operations: examples/vectorized-inputs.md
+  #   - Indexing: examples/indexing.md
+  #   - Generalized Numerical Inputs: examples/generalized-inputs.md
+  #   - Unsupported Distributions: examples/pymc-sampling.md
+
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          docstring_style: google
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

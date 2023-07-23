@@ -1,8 +1,8 @@
 """Module to calculate pricing of divvy trips.
 
-As defined here: https://divvybikes.com/pricing
+As defined <a href="https://divvybikes.com/pricing">here</a> on the divvy website.  
 
-Comprised of an unlock and 
+Comprised of an unlock and a per minute rate.
 
 """
 import numpy as np
@@ -42,8 +42,10 @@ class MinuteRate(Rate):
     Example: 
         Rides that cost 15 cents per minute after 30 minutes of riding.
 
-        >>> rate = MinuteRate(amount=15, start=30)
-        >>> rate([10, 15, 31]) # [0, 0, 16]
+        ```python 
+        rate = MinuteRate(amount=15, start=30)
+        rate([10, 15, 31]) # [0, 0, 16]
+        ```
     
     """
 

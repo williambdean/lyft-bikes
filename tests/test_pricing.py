@@ -1,6 +1,6 @@
 import numpy as np
 
-from divvy import pricing
+from lyft_bikes import pricing
 
 
 def test_unlock() -> None:

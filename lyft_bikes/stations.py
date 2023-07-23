@@ -1,4 +1,4 @@
-from divvy.divvy_request import DivvyDataBase
+from lyft_bikes.divvy_request import DivvyDataBase
 
 
 class StationBase(DivvyDataBase):

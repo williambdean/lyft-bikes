@@ -4,8 +4,9 @@ import pandas as pd
 
 from datetime import date
 
-from divvy.historical.dates import DivvyDates, DateRangeError
-from divvy.historical.historical import Downloader, HistoricalTrips
+from lyft_bikes.historical.dates import DivvyDates, DateRangeError
+from lyft_bikes.historical.historical import HistoricalTrips
+from lyft_bikes.historical.downloader import DivvyDownloader as Downloader
 
 
 @pytest.fixture

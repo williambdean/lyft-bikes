@@ -1,14 +1,14 @@
 format: 
-	python -m black divvy tests setup.py
+	poetry run python -m black divvy tests setup.py
 
 clean: 
-	find divvy tests | grep -E "(/__pycache__$\|\.pyc$\|\.pyo$\)" | xargs rm -rf
+	find lyft_bikes tests | grep -E "(/__pycache__$\|\.pyc$\|\.pyo$\)" | xargs rm -rf
 
 test: 
-	python -m pytest tests
+	poetry run python -m pytest tests
 
-coverage: 
-	python -m pytest --cov-report html --cov=divvy tests/ && open htmlcov/index.html
+cov: 
+	poetry run python -m pytest --cov-report html --cov=lyft_bikes tests/ && open htmlcov/index.html
 
-export: 
-	conda env export > environment.yaml
+html: 
+	poetry run mkdocs serve

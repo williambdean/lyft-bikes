@@ -2,49 +2,12 @@ import pandas as pd
 
 from typing import Union
 
-import io
-import zipfile
-import requests
-
-import datetime
-
-from divvy.divvy_request import BadRequest
-from divvy.historical.dates import DivvyDates
-
-
-class Downloader:
-    """Class to download historical trips.
-
-    Index for all the historical trips found here: https://divvy-tripdata.s3.amazonaws.com/index.html
-
-    Currently only supports the files with the form %Y%m-divvy-tripdata.zip that go back until
-    April 2020
-
-    """
-
-    def __init__(self, http_client=requests) -> None:
-        self.http_client = http_client
-
-    def file_name(self, date: datetime.date, suffix: str) -> str:
-        return f"{date:%Y%m}-divvy-tripdata.{suffix}"
-
-    def url(self, date: datetime.date):
-        return f"https://divvy-tripdata.s3.amazonaws.com/{self.file_name(date=date, suffix='zip')}"
-
-    def read(self, date: datetime.date) -> pd.DataFrame:
-        url = self.url(date=date)
-        response = self.http_client.get(url)
-
-        if not response.ok:
-            raise BadRequest(f"The response for {url} wasn't okay.")
-
-        zipdata = zipfile.ZipFile(io.BytesIO(response.content))
-
-        return pd.read_csv(zipdata.open(self.file_name(date=date, suffix="csv")))
+from lyft_bikes.historical.dates import DivvyDates
+from lyft_bikes.historical.downloader import BaseDownloader
 
 
 class HistoricalTrips:
-    def __init__(self, dates: DivvyDates, downloader: Downloader):
+    def __init__(self, dates: DivvyDates, downloader: BaseDownloader):
         self.dates = dates
         self.downloader = downloader
 

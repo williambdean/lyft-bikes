@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-import divvy
+import lyft_bikes
 
 
 def test_apply_pricing():
@@ -14,7 +14,7 @@ def test_apply_pricing():
         index=pd.Index([1, 2, 3, 4]),
     )
 
-    result = divvy.apply_pricing(
+    result = lyft_bikes.apply_pricing(
         duration=df["duration"],
         member=df["casual_member"] == "member",
         electric_bike=df["rideable_type"] == "electric",

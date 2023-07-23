@@ -6,7 +6,7 @@ import pandas as pd
 import json
 from typing import Dict
 
-from divvy.live import Live
+from lyft_bikes.live import Live
 
 
 @pytest.fixture
