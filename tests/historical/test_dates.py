@@ -2,7 +2,7 @@ import pytest
 
 from datetime import date
 
-from divvy.historical.dates import DivvyDates, DateRangeError
+from lyft_bikes.historical.dates import DivvyDates, DateRangeError
 
 
 @pytest.fixture

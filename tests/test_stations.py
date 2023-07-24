@@ -2,7 +2,7 @@ import pytest
 
 import pandas as pd
 
-from divvy.stations import StationStatus, StationInfo
+from lyft_bikes.stations import StationStatus, StationInfo
 
 
 @pytest.fixture

@@ -34,7 +34,7 @@ class RequestBase:
         return json.loads(response.text)
 
 
-class DivvyDataBase:
+class LiveRequest(RequestBase):
     key: str = None
     url: str = None
 

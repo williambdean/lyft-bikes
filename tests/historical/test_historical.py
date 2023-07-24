@@ -4,8 +4,9 @@ import pandas as pd
 
 from datetime import date
 
-from divvy.historical.dates import DivvyDates, DateRangeError
-from divvy.historical.historical import Downloader, HistoricalTrips
+from lyft_bikes.historical.dates import DivvyDates, DateRangeError
+from lyft_bikes.historical.historical import HistoricalTrips
+from lyft_bikes.historical.downloader import DivvyDownloader as Downloader
 
 
 @pytest.fixture
@@ -35,7 +36,7 @@ def historical_trips(test_data_dir) -> HistoricalTrips:
 
 
 def test_get_trips(historical_trips) -> None:
-    df_results = historical_trips.get_trips(year=2021, month=1)
+    df_results = historical_trips.get_months_trips(year=2021, month=1)
 
     assert isinstance(df_results, pd.DataFrame)
     assert len(df_results) == 15
@@ -50,7 +51,7 @@ def test_get_trips(historical_trips) -> None:
 )
 def test_get_trips_out_of_range(historical_trips, year, month) -> None:
     with pytest.raises(DateRangeError):
-        historical_trips.get_trips(year=year, month=month)
+        historical_trips.get_months_trips(year=year, month=month)
 
 
 def test_read(historical_trips) -> None:

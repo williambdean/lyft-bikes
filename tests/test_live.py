@@ -1,24 +1,15 @@
-from datetime import datetime
 import pytest
 
-import pandas as pd
-
-import json
-from typing import Dict
-
-from divvy.live import Live
+from lyft_bikes.live import RequestBase, LiveRequest
 
 
 @pytest.fixture
-def live(mock_requests_base) -> Live:
-    mock_requests_base.file_name = "fake-live-feed.json"
+def new_source():
+    class NewDivvyData(LiveRequest):
+        pass
 
-    return Live(requests_base=mock_requests_base)
+    return NewDivvyData()
 
 
-def test_read(live) -> None:
-    df_results = live.read()
-
-    assert isinstance(df_results, pd.DataFrame)
-    assert len(df_results) == 5
-    assert isinstance(live.last_updated, datetime)
+def test_default(new_source):
+    assert isinstance(new_source.requests_base, RequestBase)

@@ -1,0 +1,72 @@
+site_name: Lyft Bike Share Data 
+
+theme:
+  name: "material"
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+repo_name: Lyft Bike Share Data
+repo_url: https://github.com/wd60622/lyft-bikes
+edit_uri: blob/main/docs/
+site_url: https://wd60622.github.io/lyft-bikes
+
+extra: 
+  homepage: https://wd60622.github.io/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wd60622/lyft-bikes
+
+nav:
+  - Overview: index.md
+  - Modules: 
+    - modules/index.md
+    - Historical: 
+      - modules/dates.md
+      - modules/downloader.md
+      - modules/historical.md
+    - modules/pricing.md
+    - modules/bikes.md
+    - modules/stations.md
+  - Examples: 
+    - examples/historical-trips.md
+    - examples/new-pricing.md
+
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          docstring_style: google
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
