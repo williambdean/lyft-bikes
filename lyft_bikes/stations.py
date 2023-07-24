@@ -1,7 +1,8 @@
-from lyft_bikes.divvy_request import DivvyDataBase
+"""Access station information and status. More to come."""
+from lyft_bikes.live import LiveRequest
 
 
-class StationBase(DivvyDataBase):
+class StationBase(LiveRequest):
     key: str = "stations"
 
 

@@ -41,6 +41,7 @@ pytest = "^7.3.2"
 pytest-cov = "^4.1.0"
 black = "^23.3.0"
 ipython = "8.8.0"
+matplotlib = "^3.7.2"
 
 
 [tool.poetry.group.docs.dependencies]

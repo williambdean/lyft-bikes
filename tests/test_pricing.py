@@ -7,7 +7,7 @@ def test_unlock() -> None:
     duration = np.array([1, 2, 3, 5, 6])
 
     amount = 100
-    unlock = pricing.UnlockRate(amount=amount)
+    unlock = pricing.UnlockFee(amount=amount)
     result = unlock(duration=duration)
 
     answer = np.ones_like(duration) * amount
@@ -33,7 +33,7 @@ def test_unlock_minute_rate() -> None:
 
     amount = 100
     wait = 3
-    rate = pricing.UnlockRate(amount=amount) + pricing.MinuteRate(
+    rate = pricing.UnlockFee(amount=amount) + pricing.MinuteRate(
         amount=amount, start=wait
     )
     result = rate(duration=duration)

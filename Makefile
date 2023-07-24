@@ -1,5 +1,5 @@
 format: 
-	poetry run python -m black divvy tests setup.py
+	poetry run python -m black lyft_bikes tests
 
 clean: 
 	find lyft_bikes tests | grep -E "(/__pycache__$\|\.pyc$\|\.pyo$\)" | xargs rm -rf
