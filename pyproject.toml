@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lyft-bikes"
-version = "0.1.2"
+version = "0.1.3"
 description = "Python Client for Lyft Bike Sharing Data."
 authors = ["Will Dean <wd60622@gmail.com>"]
 license = "MIT"
