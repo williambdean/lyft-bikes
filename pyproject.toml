@@ -47,10 +47,36 @@ mkdocs = "^1.4.3"
 mkdocs-material = "^9.1.17"
 mkdocstrings = {extras = ["python"], version = "^0.22.0"}
 
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"**/tests/*" = ["S101"]
+
 [tool.pytest.ini_options]
 minversion = 6.0
 addopts = "--cov=lyft_bikes --cov-report=xml --cov-report=term-missing"
 testpaths = ["tests"]
+
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    min_version = 4.0
+    isolated_build = true
+    env_list =
+        # tox and distutils
+        py312
+        py311
+        py310
+        py39
+
+    [testenv]
+    deps =
+        pytest
+        pytest-cov
+    commands = pytest
+"""
 
 [build-system]
 requires = ["poetry-core"]
