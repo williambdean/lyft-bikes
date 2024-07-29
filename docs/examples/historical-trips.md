@@ -2,7 +2,7 @@
 
 The `lyft_bikes` package provides access to historical trips for cities with Lyft bike share.
 
-Read into a `pandas.DataFrame` with the `read_historical_trips` function. 
+Read into a `pandas.DataFrame` with the `read_historical_trips` function.
 
 ```python
 import lyft_bikes
@@ -12,7 +12,7 @@ start_date = "2023-01-01"
 end_date = "2023-01-31"
 
 df_trips_chicago = lyft_bikes.read_historical_trips(
-    start_date=start_date, 
+    start_date=start_date,
     end_date=end_date,
     city=city
 )
@@ -27,7 +27,7 @@ df_trips_chicago = lyft_bikes.read_historical_trips(
 4  3397017529188E8A   classic_bike  2023-01-12 13:58:01  2023-01-12 14:13:20        Kimbark Ave & 53rd St  ...  41.799568 -87.594747  41.809835 -87.599383         member
 ```
 
-Read the comparable data for New York City: 
+Read the comparable data for New York City:
 
 ```python
 city = "New York City"
@@ -47,4 +47,3 @@ df_trips_nyc = lyft_bikes.read_historical_trips(
 3  3D48C6F33AFEF329   classic_bike  2023-01-04 08:31:11  2023-01-04 08:42:12               E 53 St & Madison Ave  ...  40.759711 -73.974023  40.759291 -73.988597         member
 4  4865926C3D97BA01  electric_bike  2023-01-03 22:15:34  2023-01-03 22:30:35  Frederick Douglass Blvd & W 112 St  ...  40.801694 -73.957145  40.765909 -73.976342         casual
 ```
-

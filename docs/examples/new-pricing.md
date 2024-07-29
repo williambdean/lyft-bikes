@@ -2,7 +2,7 @@
 
 Prices can be created by adding together `UnlockFee` and `MinuteRate` objects. The `UnlockFee` is a one-time fee charged at the start of the trip. The `MinuteRate` is the price per minute after the first `start` minutes.
 
-```python 
+```python
 pricing = UnlockFee(unlock_fee) + MinuteRate(minute_rate, start=start_minute)
 ```
 

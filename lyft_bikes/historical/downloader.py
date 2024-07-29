@@ -64,7 +64,7 @@ class CitiBikesDownloader(BaseDownloader):
     base_url = "https://s3.amazonaws.com/tripdata"
 
     def file_name(self, date: datetime.date, suffix: str) -> str:
-        return f"{date:%Y%m}-citibike-tripdata.{suffix}"
+        return f"JC-{date:%Y%m}-citibike-tripdata.{suffix}"
 
     def url(self, date: datetime.date):
         return f"{self.base_url}/{self.file_name(date=date, suffix='csv.zip')}"

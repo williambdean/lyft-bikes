@@ -1,4 +1,5 @@
 """Module to calculate pricing of divvy trips."""
+
 import numpy as np
 from dataclasses import dataclass
 

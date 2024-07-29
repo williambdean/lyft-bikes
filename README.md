@@ -2,7 +2,7 @@
 
 Python client for Lyft bike share data.
 
-## Features 
+## Features
 
 - Support for [cities](https://www.lyft.com/bikes#cities) with Lyft bike share
 - [Historical trips](https://wd60622.github.io/lyft-bikes/examples/historical-trips/)
@@ -11,11 +11,11 @@ Python client for Lyft bike share data.
     - Unlock Fees
     - Minute Rates
 
-## Installation 
+## Installation
 
-Install from `pip` 
+Install from `pip`
 
-```shell 
+```shell
 $ pip install lyft-bikes
 ```
 
@@ -28,7 +28,7 @@ The documentation is hosted on [GitHub Pages](https://wd60622.github.io/lyft-bik
 The development environment was created with [`poetry`](https://python-poetry.org/docs/). The `pyproject.toml` file is the main configuration file for the project.
 
 ```bash
-poetry install . 
+poetry install .
 ```
 
 ## Contributing
