@@ -11,7 +11,7 @@ repository = "https://github.com/wd60622/lyft-bikes/"
 packages = [
     { include = "lyft_bikes" },
     { include = "lyft_bikes/py.typed" },
-    { include = "lyft_bikes/geo/*" }, 
+    { include = "lyft_bikes/geo/*" },
 ]
 classifiers = [
     "Intended Audience :: Science/Research",
