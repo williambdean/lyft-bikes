@@ -1,5 +1,10 @@
 # Lyft Bike Share Data
 
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Tests](https://github.com/wd60622/lyft-bikes/actions/workflows/tests.yml/badge.svg)](https://github.com/wd60622/lyft-bikes/actions/workflows/tests.yml)
+[![PyPI version](https://badge.fury.io/py/lyft-bikes.svg)](https://badge.fury.io/py/lyft-bikes)
+[![docs](https://github.com/wd60622/lyft-bikes/actions/workflows/docs.yml/badge.svg)](https://wd60622.github.io/lyft-bikes/)
+
 Python client for Lyft bike share data.
 
 ## Features
