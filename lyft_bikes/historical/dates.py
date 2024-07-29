@@ -1,6 +1,6 @@
 import pandas as pd
 
-from typing import Tuple, List
+from typing import List
 
 import datetime
 from calendar import monthrange
