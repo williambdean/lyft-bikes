@@ -11,7 +11,7 @@ from lyft_bikes.historical import dates as bike_dates, downloader
 
 from lyft_bikes.geo import read_fee_boundary
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 def chicago_only_error(func) -> None:
