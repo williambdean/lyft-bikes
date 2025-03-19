@@ -26,15 +26,15 @@ theme:
         name: Switch to light mode
 
 repo_name: Lyft Bike Share Data
-repo_url: https://github.com/wd60622/lyft-bikes
+repo_url: https://github.com/williambdean/lyft-bikes
 edit_uri: blob/main/docs/
-site_url: https://wd60622.github.io/lyft-bikes
+site_url: https://williambdean.github.io/lyft-bikes
 
 extra:
-  homepage: https://wd60622.github.io/
+  homepage: https://williambdean.github.io/
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/wd60622/lyft-bikes
+      link: https://github.com/williambdean/lyft-bikes
 
 nav:
   - Overview: index.md
