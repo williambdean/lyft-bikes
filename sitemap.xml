@@ -1,63 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/examples/historical-trips/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/examples/historical-trips/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/examples/live-bikes/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/examples/live-bikes/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/examples/live-stations/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/examples/live-stations/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/examples/new-pricing/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/examples/new-pricing/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/bikes/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/bikes/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/dates/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/dates/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/downloader/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/downloader/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/historical/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/historical/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/pricing/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/pricing/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
     <url>
-         <loc>https://wd60622.github.io/lyft-bikes/modules/stations/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://williambdean.github.io/lyft-bikes/modules/stations/</loc>
+         <lastmod>2025-03-19</lastmod>
     </url>
 </urlset>
